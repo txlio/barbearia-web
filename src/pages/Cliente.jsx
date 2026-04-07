@@ -4,7 +4,9 @@ import api from "../api/axios";
 function Cliente({ usuario, onLogout }) {
   const [servicos, setServicos] = useState([]);
   const [servicoSelecionado, setServicoSelecionado] = useState("");
-  const [data, setData] = useState("2026-03-20");
+  const [data, setData] = useState(() => {
+    return new Date().toISOString().split("T")[0];
+  });
   const [horarios, setHorarios] = useState([]);
   const [horarioSelecionado, setHorarioSelecionado] = useState("");
   const [mensagem, setMensagem] = useState("");
@@ -74,7 +76,7 @@ function Cliente({ usuario, onLogout }) {
       const body = {
         cliente: { id: usuario.id },
         servico: { id: Number(servicoSelecionado) },
-        data: data,
+        data,
         hora: horarioSelecionado,
       };
 
@@ -92,14 +94,14 @@ function Cliente({ usuario, onLogout }) {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 px-4 py-6 text-white sm:px-6 sm:py-8 md:px-8 md:py-10">
+    <div className="min-h-dvh bg-slate-950 px-4 py-6 text-white sm:px-6 sm:py-8 md:px-8 md:py-10">
       <div className="mx-auto max-w-3xl rounded-2xl border border-slate-800 bg-slate-900 p-5 shadow-2xl sm:p-6 md:p-8">
         <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="mb-2 text-sm uppercase tracking-[0.3em] text-amber-500">
               Cliente
             </p>
-            <h1 className="text-2xl font-bold sm:text-3xl">
+            <h1 className="text-2xl font-bold leading-tight sm:text-3xl">
               Barbearia Eduardo Silva
             </h1>
             <p className="mt-2 text-sm text-slate-400 sm:text-base">
@@ -109,7 +111,7 @@ function Cliente({ usuario, onLogout }) {
 
           <button
             onClick={onLogout}
-            className="rounded-xl bg-slate-700 px-4 py-3 font-semibold text-white transition hover:bg-slate-600"
+            className="w-full rounded-xl bg-slate-700 px-4 py-3 font-semibold text-white transition hover:bg-slate-600 sm:w-auto"
           >
             Sair
           </button>
@@ -122,6 +124,7 @@ function Cliente({ usuario, onLogout }) {
           <input
             type="date"
             value={data}
+            min={new Date().toISOString().split("T")[0]}
             onChange={(e) => {
               setData(e.target.value);
               setErro("");
@@ -142,7 +145,7 @@ function Cliente({ usuario, onLogout }) {
               setErro("");
               setMensagem("");
             }}
-            className="w-full rounded-xl border border-slate-700 bg-slate-800 px-4 py-3 text-white outline-none transition focus:border-amber-500"
+            className="w-full rounded-xl border border-slate-700 bg-slate-800 px-4 py-3 pr-12 text-white outline-none transition focus:border-amber-500"
           >
             <option value="">Selecione um serviço</option>
             {servicos.map((servico) => (
