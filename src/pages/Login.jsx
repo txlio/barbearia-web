@@ -104,8 +104,32 @@ function Login({ onLogin }) {
           </form>
         </div>
 
-        <div className="mt-6 text-center text-xs text-slate-500">
-          Desenvolvido por @txlio_reis
+        <div className="mt-6 text-center text-xs text-slate-500 space-y-2">
+          <p>Desenvolvido por @txlio_reis</p>
+
+          <p className="text-slate-600">
+            © 2026 Barbearia Eduardo Silva
+          </p>
+
+          <div className="flex justify-center gap-4 text-slate-400">
+            <a
+              href="https://github.com/txlio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-amber-400 transition"
+            >
+              GitHub
+            </a>
+
+            <a
+              href="www.linkedin.com/in/tulio-reis"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-amber-400 transition"
+            >
+              LinkedIn
+            </a>
+          </div>
         </div>
       </div>
     </div>
