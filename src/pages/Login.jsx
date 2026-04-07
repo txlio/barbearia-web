@@ -105,7 +105,7 @@ function Login({ onLogin }) {
         </div>
 
         <div className="mt-6 text-center text-xs text-slate-500 space-y-2">
-          <p>Desenvolvido por @txlio_reis</p>
+          <p>Desenvolvido por Túlio Reis</p>
 
           <p className="text-slate-600">
             © 2026 Barbearia Eduardo Silva
@@ -122,12 +122,12 @@ function Login({ onLogin }) {
             </a>
 
             <a
-              href="www.linkedin.com/in/tulio-reis"
+              href="https://www.instagram.com/txlio_reis"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-amber-400 transition"
             >
-              LinkedIn
+              Instagram
             </a>
           </div>
         </div>
