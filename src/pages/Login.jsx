@@ -45,7 +45,7 @@ function Login({ onLogin }) {
         <div className="rounded-2xl border border-slate-800 bg-slate-900 p-8 shadow-2xl">
           <div className="mb-8 text-center">
             <p className="mb-2 text-sm uppercase tracking-[0.3em] text-amber-500">
-              Barbearia Eduardo Silva
+              Barbearia
             </p>
             <h1 className="text-3xl font-bold">Login</h1>
             <p className="mt-2 text-slate-400">
@@ -108,7 +108,7 @@ function Login({ onLogin }) {
           <p>Desenvolvido por Túlio Reis</p>
 
           <p className="text-slate-600">
-            © 2026 Barbearia Eduardo Silva
+            © 2026 Barbearia
           </p>
 
           <div className="flex justify-center gap-4 text-slate-400">
