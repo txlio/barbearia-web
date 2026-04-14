@@ -102,7 +102,7 @@ function Cliente({ usuario, onLogout }) {
               Cliente
             </p>
             <h1 className="text-2xl font-bold leading-tight sm:text-3xl">
-              Barbearia Eduardo Silva
+              Barbearia
             </h1>
             <p className="mt-2 text-sm text-slate-400 sm:text-base">
               Bem-vindo, {usuario?.nome}
